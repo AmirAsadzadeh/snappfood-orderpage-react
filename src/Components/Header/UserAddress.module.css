@@ -1,0 +1,30 @@
+.user-addrss-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.map-marker {
+  margin: 0.5rem;
+}
+
+.address-label {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  text-align: right;
+}
+
+.address {
+  width: 100%;
+}
+
+.address-text {
+  font-size: 0.6rem;
+  color: gray;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

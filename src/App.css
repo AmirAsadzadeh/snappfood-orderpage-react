@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "IranSans";
+  src: url("../FontsFree-Net-ir_sans.ttf");
+}
+body {
+  background-color: #f9fafb;
+  font-family: "IranSans";
+}

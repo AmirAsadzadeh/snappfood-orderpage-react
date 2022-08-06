@@ -1,0 +1,38 @@
+.form {
+  /* display: flex;
+  flex-direction: column; */
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  height: 3rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.form input[type="text"] {
+  z-index: 1;
+  padding: 1rem;
+  background-color: #ebedf0;
+  font-family: 'IranSans';
+}
+
+.form input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+.form input[type="submit"] {
+  position: absolute;
+  width: 100%;
+  font-family: "IranSans";
+  font-size: 0.8rem;
+}
