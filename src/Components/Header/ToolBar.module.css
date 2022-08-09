@@ -1,4 +1,51 @@
-.toolbar{
+.profile-icon {
   justify-content: space-around;
   align-items: center;
+}
+
+.toolbar-items {
+  display: none;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 2rem;
+  height: 100%;
+}
+
+.user-login {
+  all: unset;
+  background-color: rgb(255, 0, 166);
+  color: white;
+  font-size: 0.8rem;
+  height: 50px;
+  padding: 0 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.restaurant-login {
+  all: unset;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.restaurant-login svg {
+  padding: 0.2rem;
+}
+
+@media only screen and (min-width: 960px) {
+  .profile-icon {
+    display: none;
+  }
+  .toolbar-items {
+    display: flex;
+  }
 }
