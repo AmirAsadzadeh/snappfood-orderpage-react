@@ -3,6 +3,7 @@ import classes from "./SearchBar.module.css";
 import React, { useRef, useState, useContext } from "react";
 import ReactDOM from "react-dom";
 import UserInfo from "../../Context/user-info";
+import Layer from "../Modal/Layer";
 
 function SearchBar() {
   const userInfo = useContext(UserInfo);
@@ -46,7 +47,7 @@ function SearchBar() {
     <React.Fragment>
       {layer
         ? ReactDOM.createPortal(
-            <div className={classes.layer} onClick={layerClickHandler}></div>,
+            <Layer onClick={layerClickHandler}></Layer>,
             document.querySelector("#layer")
           )
         : ""}
