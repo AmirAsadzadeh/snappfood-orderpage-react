@@ -3,10 +3,10 @@ import classes from "./UserAddress.module.css";
 import React, { useContext } from "react";
 import UserInfo from "../../Context/user-info";
 
-function UserAdress() {
+function UserAdress(props) {
   const { userAddress, addressClickHandler } = useContext(UserInfo);
   return (
-    <div className={classes["user-addrss-container"]}>
+    <div className={`${classes["user-addrss-container"]} ${props.className.userAddress}`}>
       <svg
         className={classes["map-marker"]}
         width="23px"

@@ -83,11 +83,13 @@ function Header() {
           fill="#FF00A6"
         ></path>
       </svg>
-      <UserAdress></UserAdress>
+      <UserAdress
+        className={{ userAddress: classes["user-address"] }}
+      ></UserAdress>
 
-      <SearchBar></SearchBar>
+      <SearchBar className={{ searchIcon: classes["search-icon"] }}></SearchBar>
 
-      <ToolBar></ToolBar>
+      <ToolBar className={{ profileIcon: classes["profile-icon"] }}></ToolBar>
     </header>
   );
 }

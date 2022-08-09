@@ -1,14 +1,16 @@
 .form {
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   position: absolute;
   right: 0;
   left: 0;
-  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   width: 50%;
+  height: 50px;
   max-width: 20rem;
-  display: flex;
-  flex-direction: column;
+  z-index: 3;
 }
 
 .form input {
@@ -22,7 +24,7 @@
   z-index: 1;
   padding: 1rem;
   background-color: #ebedf0;
-  font-family: 'IranSans';
+  font-family: "IranSans";
 }
 
 .form input:focus {
@@ -35,4 +37,19 @@
   width: 100%;
   font-family: "IranSans";
   font-size: 0.8rem;
+  cursor: pointer;
 }
+
+.layer {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+

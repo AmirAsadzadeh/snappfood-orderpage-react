@@ -5,6 +5,7 @@ import Header from "./Components/Header/Header";
 
 function App() {
   const [userInfo] = useState({
+    userName: "باهاماس (یوسف آباد)",
     isLoggedIn: false,
     userShoppingCard: [],
     userAddress: "ولیعصر، ولی عصر، فلسطین، برادران غفاری",
