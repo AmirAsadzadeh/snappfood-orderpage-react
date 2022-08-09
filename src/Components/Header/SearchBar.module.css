@@ -38,6 +38,7 @@
   font-family: "IranSans";
   font-size: 0.8rem;
   cursor: pointer;
+  border: none;
 }
 
 .layer {
@@ -48,8 +49,3 @@
   background-color: rgba(0, 0, 0, 0.26);
   z-index: 2;
 }
-
-.hidden {
-  display: none;
-}
-

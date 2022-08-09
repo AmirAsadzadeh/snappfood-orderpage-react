@@ -87,7 +87,7 @@ function Header() {
         className={{ userAddress: classes["user-address"] }}
       ></UserAdress>
 
-      <SearchBar className={{ searchIcon: classes["search-icon"] }}></SearchBar>
+      <SearchBar></SearchBar>
 
       <ToolBar className={{ profileIcon: classes["profile-icon"] }}></ToolBar>
     </header>
