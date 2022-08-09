@@ -6,6 +6,7 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .header-right {
@@ -35,8 +36,7 @@
   justify-content: center;
 }
 
-.toolbar-items {
-}
+
 
 @media only screen and (min-width: 768px) {
   .logo {

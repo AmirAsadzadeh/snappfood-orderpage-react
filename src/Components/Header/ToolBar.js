@@ -1,10 +1,16 @@
 import classes from "./ToolBar.module.css";
 
 import React from "react";
+import ReactDom from "react-dom";
+import LoginModal from "../Modal/LoginModal";
 
 function ToolBar(props) {
   return (
     <React.Fragment>
+      {ReactDom.createPortal(
+        <LoginModal></LoginModal>,
+        document.querySelector("#modal-message")
+      )}
       <div
         className={`${classes["profile-icon"]} ${props.className.profileIcon}`}
       >
