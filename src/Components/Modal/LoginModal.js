@@ -8,10 +8,10 @@ function LoginModal(props) {
   useEffect(() => {
     setTimeout(() => {
       modalContainerRef.current.classList.add(classes.active);
-    }, 100);
+    });
   }, []);
 
-  const closeButtonClickHandler =  function () {
+  const closeButtonClickHandler = function () {
     props.onClose();
   };
 

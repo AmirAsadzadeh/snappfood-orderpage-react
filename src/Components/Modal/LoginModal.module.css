@@ -7,14 +7,14 @@
   opacity: 0;
   background-color: white;
   box-shadow: 0 0 10px rgb(187, 187, 187);
-  top: 50px;
+  top: 30px;
   /* bottom: 100px; */
   left: 0;
   right: 0;
   margin: auto;
   border-radius: 1rem;
   z-index: 3;
-  transition: all ease 0.3s;
+  transition: all linear 0.1s;
 }
 
 .modal-header {
