@@ -1,10 +1,22 @@
 import classes from "./LoginModal.module.css";
 
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
-function LoginModal() {
+function LoginModal(props) {
+  const modalContainerRef = useRef();
+
+  useEffect(() => {
+    setTimeout(() => {
+      modalContainerRef.current.classList.add(classes.active);
+    }, 100);
+  }, []);
+
+  const closeButtonClickHandler =  function () {
+    props.onClose();
+  };
+
   return (
-    <div className={classes["modal-container"]}>
+    <div ref={modalContainerRef} className={classes["modal-container"]}>
       <div className={classes["modal-header"]}>
         <div className={classes["modal-logo"]}>
           <svg
@@ -80,7 +92,10 @@ function LoginModal() {
             ></path>
           </svg>
         </div>
-        <div className={classes["modal-close-button"]}>
+        <div
+          className={classes["modal-close-button"]}
+          onClick={closeButtonClickHandler}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="0.875rem"

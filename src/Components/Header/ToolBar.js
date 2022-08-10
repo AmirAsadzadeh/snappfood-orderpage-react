@@ -1,16 +1,33 @@
 import classes from "./ToolBar.module.css";
 
-import React from "react";
+import React, { useState } from "react";
 import ReactDom from "react-dom";
 import LoginModal from "../Modal/LoginModal";
+import Layer from "../Modal/Layer";
 
 function ToolBar(props) {
+  const [hasModal, setHasModal] = useState(false);
+
+  const closeModalHandler = function () {
+    setHasModal(false);
+  };
+
+  const openModalHandler = function () {
+    setHasModal(true);
+  };
+
   return (
     <React.Fragment>
-      {ReactDom.createPortal(
-        <LoginModal></LoginModal>,
-        document.querySelector("#modal-message")
-      )}
+      {hasModal &&
+        ReactDom.createPortal(
+          <LoginModal onClose={closeModalHandler}></LoginModal>,
+          document.querySelector("#modal-message")
+        )}
+      {hasModal &&
+        ReactDom.createPortal(
+          <Layer onClick={closeModalHandler}></Layer>,
+          document.querySelector("#layer")
+        )}
       <div
         className={`${classes["profile-icon"]} ${props.className.profileIcon}`}
       >
@@ -27,7 +44,7 @@ function ToolBar(props) {
       <div
         className={`${classes["toolbar-items"]} ${props.className.toolBarItems}`}
       >
-        <button className={classes["user-login"]}>
+        <button className={classes["user-login"]} onClick={openModalHandler}>
           <b>ورود </b>یا <b>عضویت</b>
         </button>
         <button className={classes["restaurant-login"]}>

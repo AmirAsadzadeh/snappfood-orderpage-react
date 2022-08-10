@@ -14,8 +14,8 @@ function SearchBar() {
   const [layer, setLayer] = useState(false);
 
   const showSearchInput = function () {
-    textInputRef.current.classList.remove(classes.hidden);
-    submitButtonRef.current.classList.remove(classes.hidden);
+    textInputRef.current.style.zIndex = 3;
+    submitButtonRef.current.style.zIndex = 3;
     textInputRef.current.style.backgroundColor = "white";
     textInputRef.current.setAttribute("placeHolder", "");
     submitButtonRef.current.style.top = "3.5rem";
@@ -23,8 +23,8 @@ function SearchBar() {
   };
 
   const hideSearchInput = function () {
-    console.log(classes.hidden);
-
+    textInputRef.current.style.zIndex = 1;
+    submitButtonRef.current.style.zIndex = 0;
     textInputRef.current.style.backgroundColor = "#ebedf0";
     textInputRef.current.setAttribute(
       "placeHolder",
