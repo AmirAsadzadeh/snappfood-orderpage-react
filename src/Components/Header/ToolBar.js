@@ -31,7 +31,7 @@ function ToolBar(props) {
       <div
         className={`${classes["profile-icon"]} ${props.className.profileIcon}`}
       >
-        <a href="#nowhere">
+        <a href="#nowhere" onClick={openModalHandler}>
           <svg width="14" height="18" viewBox="0 0 14 18" fill="#3A3D42">
             <path
               fillRule="evenodd"

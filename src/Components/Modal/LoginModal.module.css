@@ -41,6 +41,7 @@
   font-size: 0.7rem;
   font-weight: bold;
   color: gray;
+  transition: all ease 0.2s;
 }
 
 .phone-input {
@@ -51,6 +52,7 @@
   margin: 0.3rem 0;
   padding: 0.5rem;
   transition: all linear 0.2s;
+  transition: all ease 0.2s;
 }
 
 .phone-input:focus {
@@ -60,6 +62,7 @@
 .input-comment {
   font-size: 0.7rem;
   color: gray;
+  transition: all ease 0.2s;
 }
 
 .modal-submit-button {
@@ -72,6 +75,8 @@
   margin-top: 1rem;
   height: 3rem;
   width: 100%;
+  cursor: pointer;
+  transition: all ease 0.2s;
 }
 
 .modal-close-button {
@@ -82,4 +87,21 @@
   bottom: 0;
   top: 0;
   opacity: 1;
+}
+
+.red-text {
+  color: red;
+}
+
+.red-border{
+  border: 1px solid red;
+}
+
+.red-border:focus {
+  border: 1px solid red;
+}
+
+.active-btn {
+  background-color: rgb(255, 0, 166);
+  color: white;
 }

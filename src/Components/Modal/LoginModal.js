@@ -1,15 +1,34 @@
 import classes from "./LoginModal.module.css";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 function LoginModal(props) {
   const modalContainerRef = useRef();
+
+  const [inputIsValid, setInputIsValid] = useState(true);
+
+  const [buttonIsActive, setButtonIsActive] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       modalContainerRef.current.classList.add(classes.active);
     });
   }, []);
+
+  const inputChangeHandler = function (event) {
+    const enteredValue = event.target.value;
+    if (
+      !isNaN(+enteredValue) &&
+      enteredValue.slice(0, 2) === "09" &&
+      enteredValue.length === 11
+    ) {
+      setInputIsValid(true);
+      setButtonIsActive(true);
+    } else {
+      setInputIsValid(false);
+      setButtonIsActive(false);
+    }
+  };
 
   const closeButtonClickHandler = function () {
     props.onClose();
@@ -111,19 +130,37 @@ function LoginModal(props) {
         <b>ورود</b> یا <b>عضویت</b>
       </div>
       <div className={classes["modal-input-field"]}>
-        <label className={classes["phone-input-label"]} htmlFor="phone-input">
+        <label
+          className={`${classes["phone-input-label"]} ${
+            !inputIsValid ? classes["red-text"] : ""
+          }`}
+          htmlFor="phone-input"
+        >
           شماره تلفن همراه
         </label>
         <form className={classes["modal-form"]} action="">
           <input
-            className={classes["phone-input"]}
+            className={`${classes["phone-input"]} ${
+              !inputIsValid
+                ? `${classes["red-text"]} ${classes["red-border"]}`
+                : ""
+            }`}
             type="text"
             id="phone-input"
+            onChange={inputChangeHandler}
           />
-          <p className={classes["input-comment"]}>شماره با 09 شروع میشود</p>
+          <p
+            className={`${classes["input-comment"]} ${
+              !inputIsValid ? classes["red-text"] : ""
+            }`}
+          >
+            شماره با 09 شروع میشود
+          </p>
           <input
             type="submit"
-            className={classes["modal-submit-button"]}
+            className={`${classes["modal-submit-button"]} ${
+              buttonIsActive ? classes["active-btn"] : ""
+            }`}
             value="ادامه"
           />
         </form>
