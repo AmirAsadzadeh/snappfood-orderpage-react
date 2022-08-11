@@ -4,9 +4,11 @@ import React, { useContext } from "react";
 import UserInfo from "../../Context/user-info";
 
 function UserAdress(props) {
-  const { userAddress, addressClickHandler } = useContext(UserInfo);
+  const { userAddress } = useContext(UserInfo);
   return (
-    <div className={`${classes["user-addrss-container"]} ${props.className.userAddress}`}>
+    <div
+      className={`${classes["user-addrss-container"]} ${props.className.userAddress}`}
+    >
       <svg
         className={classes["map-marker"]}
         width="23px"
@@ -19,9 +21,7 @@ function UserAdress(props) {
 
       <div className={classes.address}>
         <p className={classes["address-label"]}>آدرس انتخابی</p>
-        <p className={classes["address-text"]} onClick={addressClickHandler}>
-          {userAddress}
-        </p>
+        <p className={classes["address-text"]}>{userAddress}</p>
       </div>
     </div>
   );

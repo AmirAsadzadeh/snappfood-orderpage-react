@@ -2,11 +2,11 @@ import classes from "./SearchBar.module.css";
 
 import React, { useRef, useState, useContext } from "react";
 import ReactDOM from "react-dom";
-import UserInfo from "../../Context/user-info";
+import RestaurantInfo from "../../Context/restaurant-info";
 import Layer from "../Modal/Layer";
 
 function SearchBar() {
-  const userInfo = useContext(UserInfo);
+  const { restaurantName } = useContext(RestaurantInfo);
 
   const textInputRef = useRef();
   const submitButtonRef = useRef();
@@ -28,7 +28,7 @@ function SearchBar() {
     textInputRef.current.style.backgroundColor = "#ebedf0";
     textInputRef.current.setAttribute(
       "placeHolder",
-      `جستوجو در ${userInfo.userName}`
+      `جستوجو در ${restaurantName}`
     );
     textInputRef.current.blur();
     submitButtonRef.current.style.top = "0";
@@ -56,7 +56,7 @@ function SearchBar() {
           ref={textInputRef}
           type="text"
           onClick={searchTextBoxClickHandler}
-          placeholder={"جستوجو در باهاماس (یوسف آباد)"}
+          placeholder={`جستوجو در ${restaurantName}`}
         />
         <input
           ref={submitButtonRef}

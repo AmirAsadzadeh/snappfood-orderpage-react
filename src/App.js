@@ -1,24 +1,21 @@
 import "./App.css";
 import React, { useState } from "react";
-import UserInfo from "./Context/user-info";
+
 import Header from "./Components/Header/Header";
 import AddressBar from "./Components/AddressBar/AddressBar";
 
+import UserInfoProvider from "./Context/UserInfoProvider";
+import RestaurantInfoProvider from "./Context/RestaurantInfoProvider";
+
 function App() {
-  const [userInfo] = useState({
-    userName: "باهاماس (یوسف آباد)",
-    isLoggedIn: false,
-    userShoppingCard: [],
-    userAddress: "ولیعصر، ولی عصر، فلسطین، برادران غفاری",
-  });
-
   return (
-    <UserInfo.Provider value={userInfo}>
-      <Header />
+    <RestaurantInfoProvider>
+      <UserInfoProvider>
+        <Header />
 
-      <AddressBar></AddressBar>
+        <AddressBar></AddressBar>
 
-      {/* <MainContent>
+        {/* <MainContent>
         <AboutRestaurant></AboutRestaurant>
 
         <FoodLists></FoodLists>
@@ -33,7 +30,8 @@ function App() {
       </CardBar>
 
       <Footer></Footer> */}
-    </UserInfo.Provider>
+      </UserInfoProvider>
+    </RestaurantInfoProvider>
   );
 }
 
