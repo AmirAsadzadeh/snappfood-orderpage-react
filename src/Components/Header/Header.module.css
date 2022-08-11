@@ -11,6 +11,7 @@
 
 .header-right {
   display: flex;
+  width: 40%;
 }
 
 .profile-icon {
@@ -36,13 +37,14 @@
   justify-content: center;
 }
 
-
-
 @media only screen and (min-width: 768px) {
   .logo {
     display: block;
   }
   .logo-container {
     display: flex;
+  }
+  .header-right {
+    width: 40%;
   }
 }
