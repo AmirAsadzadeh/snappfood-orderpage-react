@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import UserInfo from "./Context/user-info";
 import Header from "./Components/Header/Header";
+import AddressBar from "./Components/AddressBar/AddressBar";
 
 function App() {
   const [userInfo] = useState({
@@ -15,9 +16,9 @@ function App() {
     <UserInfo.Provider value={userInfo}>
       <Header />
 
-      {/* <AddressBar></AddressBar>
+      <AddressBar></AddressBar>
 
-      <MainContent>
+      {/* <MainContent>
         <AboutRestaurant></AboutRestaurant>
 
         <FoodLists></FoodLists>
