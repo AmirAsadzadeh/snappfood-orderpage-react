@@ -7,7 +7,6 @@ import MainContent from "./Components/MainContent/MainContent";
 
 import UserInfoProvider from "./Context/UserInfoProvider";
 import RestaurantInfoProvider from "./Context/RestaurantInfoProvider";
-import CartBar from "./Components/CartBar/CartBar";
 
 function App() {
   return (
@@ -17,12 +16,10 @@ function App() {
 
         <AddressBar />
 
-        <div className="container">
-          <MainContent />
+        {/* <div className="container"> */}
+        <MainContent />
 
-          <CartBar />
-
-          {/* <CardBar>
+        {/* <CardBar>
             <TimeBar></TimeBar>
 
             <SenderName></SenderName>
@@ -31,7 +28,7 @@ function App() {
           </CardBar>
 
           <Footer></Footer> */}
-        </div>
+        {/* </div> */}
       </UserInfoProvider>
     </RestaurantInfoProvider>
   );

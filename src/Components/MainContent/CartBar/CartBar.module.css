@@ -1,0 +1,11 @@
+.cart-bar {
+  /* background-color: blue; */
+  width: 100%;
+  height: 10rem;
+}
+
+@media only screen and (min-width: 960px) {
+  .cart-bar {
+    width: 25%;
+  }
+}

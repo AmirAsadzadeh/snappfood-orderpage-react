@@ -1,5 +1,21 @@
 .about-container {
-  height: 5rem;
   width: 100%;
-  border: 1px solid green;
+  height: 30rem;
+  background-color: green;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-container {
+    width: 50%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .about-container {
+    width: 25%;
+  }
+  /* the text align of our list guid change from right to left */
 }
