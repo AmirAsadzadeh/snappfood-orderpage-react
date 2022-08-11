@@ -1,7 +1,7 @@
 .address-bar-container {
-  height: 5rem;
+  height: 3git rem;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 0 0;
   font-size: 0.6rem;
 }
 

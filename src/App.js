@@ -1,11 +1,13 @@
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 
 import Header from "./Components/Header/Header";
 import AddressBar from "./Components/AddressBar/AddressBar";
+import MainContent from "./Components/MainContent/MainContent";
 
 import UserInfoProvider from "./Context/UserInfoProvider";
 import RestaurantInfoProvider from "./Context/RestaurantInfoProvider";
+import CartBar from "./Components/CartBar/CartBar";
 
 function App() {
   return (
@@ -13,23 +15,23 @@ function App() {
       <UserInfoProvider>
         <Header />
 
-        <AddressBar></AddressBar>
+        <AddressBar />
 
-        {/* <MainContent>
-        <AboutRestaurant></AboutRestaurant>
+        <div className="container">
+          <MainContent />
 
-        <FoodLists></FoodLists>
-      </MainContent>
+          <CartBar />
 
-      <CardBar>
-        <TimeBar></TimeBar>
+          {/* <CardBar>
+            <TimeBar></TimeBar>
 
-        <SenderName></SenderName>
+            <SenderName></SenderName>
 
-        <Card></Card>
-      </CardBar>
+            <Card></Card>
+          </CardBar>
 
-      <Footer></Footer> */}
+          <Footer></Footer> */}
+        </div>
       </UserInfoProvider>
     </RestaurantInfoProvider>
   );

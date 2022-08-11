@@ -1,0 +1,10 @@
+.cart-bar {
+  border: 1px solid blue;
+  height: 10rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .cart-bar {
+    width: 25%;
+  }
+}
