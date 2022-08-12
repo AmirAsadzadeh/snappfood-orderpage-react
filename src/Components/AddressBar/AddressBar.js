@@ -11,6 +11,7 @@ function AddressBar() {
     const isLastItem = ourPagesLength - 1 === i;
     return (
       <span
+        key={i}
         className={`${
           isLastItem ? classes["current-page"] : classes["prev-page"]
         }`}
