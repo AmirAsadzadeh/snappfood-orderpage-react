@@ -1,7 +1,6 @@
 .about-container {
   width: 100%;
-  height: 30rem;
-  /* background-color: green; */
+  height: 28rem;
 }
 
 .about-header {
@@ -67,7 +66,7 @@
   align-items: center;
   color: #45cb8c;
   font-size: 0.8rem;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
   cursor: pointer;
   transition: all ease-in 0.1533s;
 }
@@ -80,12 +79,39 @@
   margin: 0 0.5rem;
 }
 
+.food-groups-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.food-groups-list li {
+  margin: 0.2rem 0;
+  padding: 0.2rem;
+}
+
+.food-groups-list a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  color: inherit;
+}
+
+.item-active {
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+  padding-right: 0.6rem !important;
+  border-right: 2px solid rgb(49, 49, 49);
+}
+
 @media only screen and (min-width: 600px) {
   .about-container {
     width: 50%;
     position: -webkit-sticky;
     position: sticky;
-    top: 4.5rem;
+    top: 5.5rem;
   }
 }
 
@@ -93,5 +119,14 @@
   .about-container {
     width: 25%;
   }
-  /* the text align of our list guid change from right to left */
+  .food-groups-navigation {
+    text-align: left;
+  }
+
+  .item-active {
+    color: rgb(34, 34, 34);
+    padding-left: 0.6rem !important;
+    border-left: 2px solid black;
+    border-right: none;
+  }
 }

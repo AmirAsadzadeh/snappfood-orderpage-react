@@ -11,12 +11,22 @@ function RestaurantInfoProvider(props) {
     restaurantComments: [],
     restaurantCommentAmount: 567,
     restaurantMenu: {
-      mostWanted: { label: "پرطرفدارها", items: [], id: 0 },
-      hotSandwiches: { label: "ساندویچ گرم", items: [], id: 1 },
-      coldSandwiches: { label: "ساندویچ سرد", items: [], id: 2 },
-      pasta: { label: "پاستا", items: [], id: 3 },
-      salad: { label: "سالاد و پیش غذا", items: [], id: 4 },
-      drinks: { label: "نوشیدنی", items: [], id: 5 },
+      mostWanted: { label: "پرطرفدارها", items: [], id: 0, isActive: true },
+      hotSandwiches: {
+        label: "ساندویچ گرم",
+        items: [],
+        id: 1,
+        isActive: false,
+      },
+      coldSandwiches: {
+        label: "ساندویچ سرد",
+        items: [],
+        id: 2,
+        isActive: false,
+      },
+      pasta: { label: "پاستا", items: [], id: 3, isActive: false },
+      salad: { label: "سالاد و پیش غذا", items: [], id: 4, isActive: false },
+      drinks: { label: "نوشیدنی", items: [], id: 5, isActive: false },
     },
   };
   return (

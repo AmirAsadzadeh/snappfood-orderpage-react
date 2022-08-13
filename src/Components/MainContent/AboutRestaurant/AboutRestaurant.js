@@ -1,12 +1,24 @@
 import classes from "./AboutRestaurant.module.css";
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import RestaurantInfo from "../../../Context/restaurant-info";
 
 function AboutRestaurant() {
   const aboutRestaurantCtx = useContext(RestaurantInfo);
 
-  // console.log(Object.keys(aboutRestaurantCtx.restaurantMenu));
+  const sortedNavigationList = Object.values(aboutRestaurantCtx.restaurantMenu)
+    .sort((item, nextItem) => item.id - nextItem.id)
+    .map((value) => {
+      return (
+        <li
+          className={value.isActive ? classes[`item-active`] : ""}
+          key={value.id}
+        >
+          <a href={`#${value.id}`}>{value.label}</a>
+        </li>
+      );
+    });
+
   return (
     <aside className={classes["about-container"]}>
       <section className={classes["about-section"]}>
@@ -56,12 +68,8 @@ function AboutRestaurant() {
           </button>
         </div>
       </section>
-      <nav>
-        {Object.values(aboutRestaurantCtx.restaurantMenu)
-          .sort((item, nextItem) => item.id - nextItem.id)
-          .map((value) => {
-            return <div key={value.id}>{value.label}</div>;
-          })}
+      <nav className={classes["food-groups-navigation"]}>
+        <ul className={classes["food-groups-list"]}>{sortedNavigationList}</ul>
       </nav>
     </aside>
   );
