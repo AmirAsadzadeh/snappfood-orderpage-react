@@ -1,7 +1,10 @@
 .foodslist-container {
   height: 100rem;
   width: 100%;
-  /* background-color: yellow; */
+  padding: 0.5rem;
+  background-color: yellow;
+  border-radius: 0.8rem;
+  border: 1px solid lightgray;
 }
 
 @media only screen and (min-width: 600px) {
@@ -13,5 +16,7 @@
 @media only screen and (min-width: 960px) {
   .foodslist-container {
     width: 50%;
+    margin: 0 1rem;
+
   }
 }
