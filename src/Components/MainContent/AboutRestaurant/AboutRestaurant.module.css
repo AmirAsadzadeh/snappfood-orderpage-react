@@ -1,6 +1,7 @@
 .about-container {
   width: 100%;
   height: 28rem;
+  padding:0.5rem
 }
 
 .about-header {
