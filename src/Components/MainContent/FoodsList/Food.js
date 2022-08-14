@@ -17,7 +17,7 @@ function Food(props) {
           <img src={props.food.image} alt="nothinggg" />
         </div>
       </div>
-      <ul>
+      <ul className={classes["type-list"]}>
         {props.food.types.map((item) => (
           <li key={item.id}>
             <div className={classes["types-container"]}>
@@ -25,7 +25,7 @@ function Food(props) {
                 <p className={classes["type-title"]}>{item.title}</p>
                 <div className={classes["types-price-container"]}>
                   <p className={classes["type-price"]}>
-                    {new Intl.NumberFormat("fa-IR").format(item.price)}
+                    {new Intl.NumberFormat("fa-IR").format(item.price)} تومان
                   </p>
                 </div>
               </div>

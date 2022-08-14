@@ -31,7 +31,7 @@
 
 .food-name {
   font-size: 0.9rem;
-  color: rgb(36, 36, 36);
+  color: rgb(58, 58, 58);
 }
 
 .food-description {
@@ -60,6 +60,10 @@
 .types-container:hover .type-button:disabled {
   background-color: rgb(235, 235, 235);
   color: rgb(158, 158, 158);
+}
+
+.type-list {
+  list-style-type: none;
 }
 
 .type-title {
@@ -91,4 +95,10 @@
 .type-button:disabled {
   background-color: rgb(235, 235, 235);
   color: rgb(158, 158, 158);
+}
+
+@media only screen and (min-width: 960px) {
+  .section-container {
+    width: 50%;
+  }
 }

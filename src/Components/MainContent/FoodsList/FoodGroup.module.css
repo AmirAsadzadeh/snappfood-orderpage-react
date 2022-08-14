@@ -9,3 +9,8 @@
   color: rgb(73, 73, 73);
   border-bottom: 1px solid rgb(235, 235, 235);
 }
+
+.food-group-container {
+  display: flex;
+  flex-wrap: wrap;
+}
