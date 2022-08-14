@@ -2,12 +2,21 @@ import classes from "./FoodsList.module.css";
 
 import React, { useContext } from "react";
 import RestaurantInfo from "../../../Context/restaurant-info";
-import Food from "./Food";
+import FoodGroup from "./FoodGroup";
 
 function FoodsList() {
-  const restaurantCtx = useContext(RestaurantInfo);
+  const { restaurantMenu } = useContext(RestaurantInfo);
+  const sortedMenu = Object.values(restaurantMenu).sort(
+    (thisItem, nextItam) => thisItem.id - nextItam.id
+  );
 
-  return <section className={classes["foodslist-container"]}></section>;
+  return (
+    <section className={classes["foodslist-container"]}>
+      {sortedMenu.map((foodGroup) => (
+        <FoodGroup key={foodGroup.id} menu={foodGroup}></FoodGroup>
+      ))}
+    </section>
+  );
 }
 
 export default FoodsList;

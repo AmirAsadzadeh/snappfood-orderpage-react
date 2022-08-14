@@ -1,6 +1,7 @@
 import React from "react";
 
 const RestaurantInfo = React.createContext({
+  isOpen: "",
   restaurantName: "",
   restaurantRate: "",
   restaurantComments: [],
