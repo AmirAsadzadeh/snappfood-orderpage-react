@@ -14,7 +14,7 @@ function Food(props) {
           <p className={classes["food-description"]}>{props.food.openText}</p>
         </div>
         <div className={classes["food-image-container"]}>
-          <img src={props.food.image} alt="nothinggg" />
+          <img src={props.food.image} alt={props.food.name} />
         </div>
       </div>
       <ul className={classes["type-list"]}>
