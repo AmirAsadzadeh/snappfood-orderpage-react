@@ -7,6 +7,7 @@ import MainContent from "./Components/MainContent/MainContent";
 
 import UserInfoProvider from "./Context/UserInfoProvider";
 import RestaurantInfoProvider from "./Context/RestaurantInfoProvider";
+import CartInfoProvider from "./Context/CartInfoProvider";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         <AddressBar />
 
         {/* <div className="container"> */}
-        <MainContent />
+        <CartInfoProvider>
+          <MainContent />
+        </CartInfoProvider>
 
         {/* <CardBar>
             <TimeBar></TimeBar>
