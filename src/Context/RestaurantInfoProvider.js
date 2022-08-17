@@ -17,12 +17,12 @@ function RestaurantInfoProvider(props) {
 
     restaurantCommentAmount: 567,
 
-    restaurantMenu: {
-      mostWanted: {
+    restaurantMenu: [
+      {
         label: "پرطرفدارها",
         items: [
           {
-            foodId: "0001",
+            foodId: "0002",
             name: "ساندویچ مخصوص کوکتل آرژانتینی",
             openText:
               "کوکتل بخارپز ممتاز میکاییلیان، چیپس، پنیر، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
@@ -35,7 +35,7 @@ function RestaurantInfoProvider(props) {
             ],
           },
           {
-            foodId: "0002",
+            foodId: "0013",
             name: "ساندویچ هیولا بیکن (سرد)",
             openText:
               "بیکن بره ۹۰% میکاییلیان، بیکن گوشت ۹۰% میکاییلیان، ژامبون مرغ ۹۰% میکاییلیان، چیپس، هالوپینو، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
@@ -48,7 +48,7 @@ function RestaurantInfoProvider(props) {
             ],
           },
           {
-            foodId: "0003",
+            foodId: "0009",
             name: "ساندویچ مخلوط (سرد)",
             openText:
               "بیکن بره ۹۰% میکاییلیان، بیکن گوشت ۹۰% میکاییلیان، ژامبون مرغ ۹۰% میکاییلیان، ژامبون گوشت ۹۰%، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
@@ -61,20 +61,7 @@ function RestaurantInfoProvider(props) {
             ],
           },
           {
-            foodId: "0004",
-            name: "ساندویچ رست بیف",
-            openText:
-              "گوشت سفید ران گوساله ریش شده، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
-            image:
-              "	https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/616826864ed60.JPEG",
-            foodRate: 4.2,
-            types: [
-              { id: "small", title: "کوچک", price: 144000 },
-              { id: "one", title: "یک نفره", price: 196000 },
-            ],
-          },
-          {
-            foodId: "0005",
+            foodId: "0001",
             name: "ساندویچ کوکتل آرژانتینی",
             openText:
               "کوکتل بخارپز ممتاز میکاییلیان، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
@@ -87,7 +74,7 @@ function RestaurantInfoProvider(props) {
             ],
           },
           {
-            foodId: "0006",
+            foodId: "0007",
             name: "ساندویچ ژامبون مرغ (سرد)",
             openText:
               "ژامبون مرغ ۹۰% میکاییلیان، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
@@ -100,7 +87,7 @@ function RestaurantInfoProvider(props) {
             ],
           },
           {
-            foodId: "0007",
+            foodId: "0008",
             name: "ساندویچ ژامبون مرغ ویژه (سرد)",
             openText:
               "ژامبون مرغ ۹۰% میکاییلیان، ژامبون مرغ و بیکن تکه ای، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
@@ -126,8 +113,7 @@ function RestaurantInfoProvider(props) {
         id: 0,
         isActive: true,
       },
-
-      hotSandwiches: {
+      {
         label: "ساندویچ گرم",
         items: [
           {
@@ -199,8 +185,7 @@ function RestaurantInfoProvider(props) {
         id: 1,
         isActive: false,
       },
-
-      coldSandwiches: {
+      {
         label: "ساندویچ سرد",
         items: [
           {
@@ -308,8 +293,7 @@ function RestaurantInfoProvider(props) {
         id: 2,
         isActive: false,
       },
-
-      pasta: {
+      {
         label: "پاستا",
         items: [
           {
@@ -329,8 +313,7 @@ function RestaurantInfoProvider(props) {
         id: 3,
         isActive: false,
       },
-
-      salad: {
+      {
         label: "سالاد و پیش غذا",
         items: [
           {
@@ -356,8 +339,7 @@ function RestaurantInfoProvider(props) {
         id: 4,
         isActive: false,
       },
-
-      drinks: {
+      {
         label: "نوشیدنی",
         items: [
           {
@@ -399,7 +381,7 @@ function RestaurantInfoProvider(props) {
         id: 5,
         isActive: false,
       },
-    },
+    ],
   };
   return (
     <RestaurantInfo.Provider value={restaurantInfo}>
