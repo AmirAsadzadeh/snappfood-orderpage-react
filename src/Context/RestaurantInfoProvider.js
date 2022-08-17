@@ -100,7 +100,7 @@ function RestaurantInfoProvider(props) {
             ],
           },
           {
-            foodId: "0008",
+            foodId: "0005",
             name: "ساندویچ شکارچیان نود و هشت",
             openText:
               "سوسیس چوریتسو، کاهو، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
@@ -144,11 +144,11 @@ function RestaurantInfoProvider(props) {
           },
           {
             foodId: "0003",
-            name: "ساندویچ شکارچیان نود و هشت",
+            name: "ساندویچ رست بیف",
             openText:
-              "سوسیس چوریتسو، کاهو، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
+              "گوشت سفید ران گوساله ریش شده، پیاز و جعفری، گوجه، خیارشور، سس مخصوص باماهاس، نان باگت، سرویس اضافه به انتخاب شما",
             image:
-              "	https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/6129cc91e28ba.jpg",
+              "https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/616826863ab3e.JPEG",
             foodRate: 4.1,
             types: [
               { id: "small", title: "کوچک", price: 118000 },

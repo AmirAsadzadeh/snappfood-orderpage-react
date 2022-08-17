@@ -6,19 +6,21 @@ import RestaurantInfo from "../../../Context/restaurant-info";
 function Food(props) {
   const { isOpen: restaurantIsOpen } = useContext(RestaurantInfo);
 
+  const foodInfo = props.food;
+
   return (
     <section className={classes["section-container"]}>
       <div className={classes["food-detail-container"]}>
         <div className={classes["food-description-container"]}>
-          <h3 className={classes["food-name"]}>{props.food.name}</h3>
-          <p className={classes["food-description"]}>{props.food.openText}</p>
+          <h3 className={classes["food-name"]}>{foodInfo.name}</h3>
+          <p className={classes["food-description"]}>{foodInfo.openText}</p>
         </div>
         <div className={classes["food-image-container"]}>
-          <img src={props.food.image} alt={props.food.name} />
+          <img src={foodInfo.image} alt={foodInfo.name} />
         </div>
       </div>
       <ul className={classes["type-list"]}>
-        {props.food.types.map((item) => (
+        {foodInfo.types.map((item) => (
           <li key={item.id}>
             <div className={classes["types-container"]}>
               <div>
