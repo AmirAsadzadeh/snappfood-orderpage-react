@@ -1,7 +1,7 @@
 .about-container {
   width: 100%;
   height: 28rem;
-  padding:0.5rem
+  padding: 0.5rem;
 }
 
 .about-header {
@@ -13,6 +13,7 @@
   width: 5rem;
   height: 5rem;
   margin: 0 0 0 1rem;
+  flex-shrink: 0;
 }
 
 .about-image {
@@ -27,6 +28,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 0.5rem 0.3rem;
+  overflow: hidden;
 }
 
 .about-rate-container {
@@ -53,6 +55,8 @@
 .about-title {
   color: rgb(43, 43, 43);
   font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .oponion-button {
