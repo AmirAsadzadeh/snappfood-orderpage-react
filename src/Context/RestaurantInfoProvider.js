@@ -393,7 +393,7 @@ function RestaurantInfoProvider(props) {
             image:
               "https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/60ff079973a62.jpg",
             foodRate: 4.0,
-            types: [{ id: "", title: "", price: null }],
+            types: [{ id: "", title: "", price: 7000 }],
           },
         ],
         id: 5,
