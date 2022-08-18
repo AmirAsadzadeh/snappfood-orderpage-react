@@ -2,9 +2,11 @@ import classes from "./Food.module.css";
 
 import React, { useContext } from "react";
 import RestaurantInfo from "../../../Context/restaurant-info";
+import CartInfo from "../../../Context/cart-info";
 
 function Food(props) {
   const { isOpen: restaurantIsOpen } = useContext(RestaurantInfo);
+  const cartInfoCtx = useContext(CartInfo);
 
   const foodInfo = props.food;
 
@@ -34,6 +36,16 @@ function Food(props) {
               <button
                 className={classes["type-button"]}
                 disabled={!restaurantIsOpen}
+                onClick={cartInfoCtx.dispatch.bind(null, {
+                  type: "ADD_FIRST",
+                  data: {
+                    id: `${foodInfo.id}`,
+                    name: "test",
+                    originalPrice: 120000,
+                    discount: 20,
+                    specialItems: [],
+                  },
+                })}
               >
                 افزودن
               </button>
