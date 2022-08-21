@@ -3,10 +3,9 @@
   width: 80%;
   max-width: 30rem;
   padding: 1rem;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   background-color: white;
-  box-shadow: 0 0 10px rgb(187, 187, 187);
   top: 30px;
   /* bottom: 100px; */
   left: 0;
@@ -93,7 +92,7 @@
   color: red;
 }
 
-.red-border{
+.red-border {
   border: 1px solid red;
 }
 

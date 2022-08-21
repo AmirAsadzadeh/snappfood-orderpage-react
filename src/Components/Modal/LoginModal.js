@@ -30,10 +30,6 @@ function LoginModal(props) {
     }
   };
 
-  const closeButtonClickHandler = function () {
-    props.onClose();
-  };
-
   return (
     <div ref={modalContainerRef} className={classes["modal-container"]}>
       <div className={classes["modal-header"]}>
@@ -111,10 +107,7 @@ function LoginModal(props) {
             ></path>
           </svg>
         </div>
-        <div
-          className={classes["modal-close-button"]}
-          onClick={closeButtonClickHandler}
-        >
+        <div className={classes["modal-close-button"]} onClick={props.onClose}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="0.875rem"
