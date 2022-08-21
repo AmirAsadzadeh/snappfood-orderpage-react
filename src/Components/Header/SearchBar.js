@@ -45,12 +45,11 @@ function SearchBar() {
 
   return (
     <React.Fragment>
-      {layer
-        ? ReactDOM.createPortal(
-            <Layer onClick={layerClickHandler}></Layer>,
-            document.querySelector("#layer")
-          )
-        : ""}
+      {layer &&
+        ReactDOM.createPortal(
+          <Layer onClick={layerClickHandler}></Layer>,
+          document.querySelector("#layer")
+        )}
       <form className={classes.form}>
         <input
           ref={textInputRef}
