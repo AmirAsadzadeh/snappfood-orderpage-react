@@ -31,8 +31,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.6,
             discount: 10,
             types: [
-              { id: "one", title: "یک نفره", price: 84000 },
-              { id: "small", title: "کوچک", price: 215000 },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 84000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 215000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -45,8 +63,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.4,
             discount: 0,
             types: [
-              { id: "one", title: "یک نفره", price: 84000 },
-              { id: "small", title: "کوچک", price: 215000 },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 84000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 215000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -59,8 +95,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.3,
             discount: 0,
             types: [
-              { id: "one", title: "یک نفره", price: 119000 },
-              { id: "small", title: "کوچک", price: 88000 },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 119000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 88000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -73,8 +127,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.2,
             discount: 0,
             types: [
-              { id: "one", title: "یک نفره", price: 98000 },
-              { id: "small", title: "کوچک", price: 72000 },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 98000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 72000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -87,8 +159,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 79000 },
-              { id: "one", title: "یک نفره", price: 108000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 79000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 108000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -101,8 +191,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "کوچک", title: "", price: 89000 },
-              { id: "یک نفره", title: "", price: 124000 },
+              {
+                id: "کوچک",
+                title: "",
+                price: 89000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "یک نفره",
+                title: "",
+                price: 124000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -114,7 +222,18 @@ function RestaurantInfoProvider(props) {
               "	https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/6129cc91e28ba.jpg",
             foodRate: 4.4,
             discount: 0,
-            types: [{ id: "small", title: "کوچک", price: 162000 }],
+            types: [
+              {
+                id: "small",
+                title: "کوچک",
+                price: 162000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+            ],
           },
         ],
         id: 0,
@@ -133,8 +252,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 72000 },
-              { id: "one", title: "یک نفره", price: 98000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 72000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 98000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -147,8 +284,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 84000 },
-              { id: "one", title: "یک نفره", price: 116000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 84000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 116000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -161,8 +316,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.1,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 118000 },
-              { id: "one", title: "یک نفره", price: 162000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 118000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 162000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -175,8 +348,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.4,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 107000 },
-              { id: "one", title: "یک نفره", price: 179000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 107000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 179000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -189,8 +380,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.1,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 118000 },
-              { id: "one", title: "یک نفره", price: 162000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 118000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 162000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
         ],
@@ -209,7 +418,18 @@ function RestaurantInfoProvider(props) {
               "https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/60ff0735c16fa.jpg",
             foodRate: 4.6,
             discount: 0,
-            types: [{ id: "small", title: "", price: 69000 }],
+            types: [
+              {
+                id: "small",
+                title: "",
+                price: 69000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+            ],
           },
           {
             foodId: "0007",
@@ -221,8 +441,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 79000 },
-              { id: "one", title: "یک نفره", price: 108000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 79000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 108000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -235,8 +473,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 89000 },
-              { id: "one", title: "یک نفره", price: 124000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 89000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 124000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -249,8 +505,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.6,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 88000 },
-              { id: "one", title: "یک نفره", price: 119000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 88000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 119000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -263,8 +537,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 104000 },
-              { id: "one", title: "یک نفره", price: 139000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 104000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 139000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -277,8 +569,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.4,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 129000 },
-              { id: "one", title: "یک نفره", price: 176000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 129000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 176000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -291,8 +601,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.0,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 109000 },
-              { id: "one", title: "یک نفره", price: 149000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 109000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 149000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -305,8 +633,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.5,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 159000 },
-              { id: "one", title: "یک نفره", price: 218000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 159000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 218000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
         ],
@@ -326,8 +672,26 @@ function RestaurantInfoProvider(props) {
             foodRate: 3.6,
             discount: 0,
             types: [
-              { id: "small", title: "کوچک", price: 86000 },
-              { id: "one", title: "یک نفره", price: 129000 },
+              {
+                id: "small",
+                title: "کوچک",
+                price: 86000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "one",
+                title: "یک نفره",
+                price: 129000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
         ],
@@ -346,7 +710,18 @@ function RestaurantInfoProvider(props) {
               "https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/62cbf1767a80b.jpg",
             foodRate: 4.4,
             discount: 0,
-            types: [{ id: "one", title: "", price: 18000 }],
+            types: [
+              {
+                id: "one",
+                title: "",
+                price: 18000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+            ],
           },
           {
             foodId: "0016",
@@ -356,7 +731,18 @@ function RestaurantInfoProvider(props) {
               "https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/60ff0735cafcf.jpg",
             foodRate: 4.5,
             discount: 0,
-            types: [{ id: "one", title: "", price: 10000 }],
+            types: [
+              {
+                id: "one",
+                title: "",
+                price: 10000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+            ],
           },
         ],
         id: 4,
@@ -374,9 +760,36 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.1,
             discount: 0,
             types: [
-              { id: "coca", title: "کوکاکولا", price: 9500 },
-              { id: "fanta", title: "فانتا پرتقالی", price: 9500 },
-              { id: "sprite", title: "اسپرایت", price: 9500 },
+              {
+                id: "coca",
+                title: "کوکاکولا",
+                price: 9500,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "fanta",
+                title: "فانتا پرتقالی",
+                price: 9500,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "sprite",
+                title: "اسپرایت",
+                price: 9500,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -388,9 +801,36 @@ function RestaurantInfoProvider(props) {
             foodRate: 4.3,
             discount: 0,
             types: [
-              { id: "coca", title: "کوکاکولا", price: 10000 },
-              { id: "fanta", title: "فانتا پرتقالی", price: 10000 },
-              { id: "sprite", title: "اسپرایت", price: 10000 },
+              {
+                id: "coca",
+                title: "کوکاکولا",
+                price: 10000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "fanta",
+                title: "فانتا پرتقالی",
+                price: 10000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+              {
+                id: "sprite",
+                title: "اسپرایت",
+                price: 10000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
             ],
           },
           {
@@ -401,7 +841,18 @@ function RestaurantInfoProvider(props) {
               "https://cdn.snappfood.ir/641x641/cdn/82/15/3/product_image/zoodfood/60ff079973a62.jpg",
             foodRate: 4.0,
             discount: 0,
-            types: [{ id: "", title: "", price: 7000 }],
+            types: [
+              {
+                id: "",
+                title: "",
+                price: 7000,
+                specials: [
+                  ["سس خردل", 12000],
+                  ["سس قرمز", 12000],
+                  ["سس سفید", 12000],
+                ],
+              },
+            ],
           },
         ],
         id: 5,
