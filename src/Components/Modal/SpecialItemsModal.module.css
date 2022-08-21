@@ -1,24 +1,33 @@
 .modal-container {
-  height: 20rem;
+  height: 30rem;
   width: 80%;
   max-width: 30rem;
   padding: 1rem;
   position: fixed;
-  /* opacity: 0; */
-  background-color: red;
+  opacity: 0;
+  background-color: white;
   top: 30px;
-  /* bottom: 100px; */
+  bottom: 100px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   z-index: 3;
   transition: all linear 0.1s;
 }
 
 .modal-title {
   font-size: 1.3rem;
+  font-weight: bolder;
+  color: rgb(68, 68, 68);
+  padding: 1rem 0 0.5rem 0;
+}
+
+.modal-description {
+  font-size: 0.7rem;
+  color: rgb(68, 68, 68);
+  margin-bottom: 1rem;
 }
 
 .modal-submit-button {
@@ -26,7 +35,7 @@
   background-color: rgb(255, 0, 166);
   border-radius: 0.3rem;
   text-align: center;
-  color: gray;
+  color: white;
   font-weight: bolder;
   margin-top: 1rem;
   height: 3rem;
@@ -45,7 +54,38 @@
   opacity: 1;
 }
 
-.active-btn {
-  background-color: rgb(255, 0, 166);
-  color: white;
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: rgb(53, 53, 53);
+}
+
+.form label {
+  cursor: pointer;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.form > div {
+  margin: 1rem 0;
+}
+
+.form input[type="checkbox"] {
+  /* all: unset; */
+  height: 1.3rem;
+  width: 1.3rem;
+  margin-left: 0.5rem;
+  border: 1px solid lightgray;
+}
+
+.special-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.special-items-container {
+  padding: 1rem;
+  border: 1px solid lightgray;
 }

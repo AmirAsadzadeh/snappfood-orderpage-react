@@ -1,10 +1,40 @@
 import classes from "./SpecialItemsModal.module.css";
 
 import React from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 function SpecialItemsModal(props) {
+  const formRef = useRef();
+  const modalRef = useRef();
+
+  useEffect(() => {
+    setTimeout(() => {
+      modalRef.current.classList.add(classes.active);
+    }, 100);
+  }, []);
+
+  const formSubmitHandler = function (event) {
+    event.preventDefault();
+
+    const nodeList = formRef.current.childNodes;
+
+    const selectedItems = [];
+
+    nodeList.forEach((item) => {
+      if (item.querySelector("input")?.checked === true) {
+        const name = item.querySelector("input").id;
+        selectedItems.push([props.specials[name][0], props.specials[name][1]]);
+      }
+    });
+
+    props.onClose();
+
+    return selectedItems;
+  };
+
   return (
-    <div className={classes["modal-container"]}>
+    <div ref={modalRef} className={classes["modal-container"]}>
       <div className={classes["modal-header"]}>
         <div className={classes["modal-close-button"]} onClick={props.onClose}>
           <svg
@@ -20,7 +50,32 @@ function SpecialItemsModal(props) {
       </div>
 
       <div className={classes["modal-title"]}>انتخاب افزودنی</div>
-      <p>{props.foodName + " " + props.type}</p>
+      <p className={classes["modal-description"]}>
+        {props.foodName + " " + props.type}
+      </p>
+      <form ref={formRef} className={classes.form} action="">
+        <div className={classes["special-items-container"]}>
+          {Object.entries(props.specials).map((special) => (
+            <div key={special[0]} className={classes["special-item-container"]}>
+              <div>
+                <label>
+                  <input id={special[0]} type="checkbox" /> {special[1][0]}
+                </label>
+              </div>
+              <p>
+                {new Intl.NumberFormat("fa-IR").format(special[1][1])} تومان
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <button
+          className={classes["modal-submit-button"]}
+          onClick={formSubmitHandler}
+        >
+          افزودن به سبد خرید
+        </button>
+      </form>
     </div>
   );
 }
