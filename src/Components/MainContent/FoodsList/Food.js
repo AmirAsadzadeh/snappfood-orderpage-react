@@ -1,12 +1,16 @@
 import classes from "./Food.module.css";
 
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import ReactDom from "react-dom";
 import RestaurantInfo from "../../../Context/restaurant-info";
 import CartInfo from "../../../Context/cart-info";
+import SpecialItemsModal from "../../Modal/SpecialItemsModal";
 
 function Food(props) {
   const { isOpen: restaurantIsOpen } = useContext(RestaurantInfo);
   const cartInfoCtx = useContext(CartInfo);
+
+  const [hasModal, setHasModal] = useState(true);
 
   const foodInfo = props.food;
 
@@ -36,19 +40,29 @@ function Food(props) {
               <button
                 className={classes["type-button"]}
                 disabled={!restaurantIsOpen}
-                onClick={cartInfoCtx.dispatch.bind(null, {
-                  type: "ADD_FIRST",
-                  data: {
-                    id: `${foodInfo.id}`,
-                    name: "test",
-                    originalPrice: 120000,
-                    discount: 20,
-                    specialItems: [],
+                onClick={cartInfoCtx.controller.bind(null, {
+                  actionType: "add",
+                  foodData: {
+                    name: foodInfo.name,
+                    id: foodInfo.foodId,
+                    originalPrice: item.price,
+                    discountedPrice:
+                      item.price - (item.price * foodInfo.discount) / 100,
+                    discount: foodInfo.discount,
+                    foodType: item.title,
                   },
                 })}
               >
                 افزودن
               </button>
+              {hasModal &&
+                ReactDom.createPortal(
+                  <SpecialItemsModal
+                    foodName={foodInfo.name}
+                    type={item.title}
+                  />,
+                  document.querySelector("#modal-message")
+                )}
             </div>
           </li>
         ))}

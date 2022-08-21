@@ -6,7 +6,7 @@ import FoodGroup from "./FoodGroup";
 
 function FoodsList() {
   const { restaurantMenu } = useContext(RestaurantInfo);
-  const sortedMenu = Object.values(restaurantMenu).sort(
+  const sortedMenu = restaurantMenu.sort(
     (thisItem, nextItam) => thisItem.id - nextItam.id
   );
 
