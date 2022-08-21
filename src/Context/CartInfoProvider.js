@@ -40,6 +40,7 @@ function CartInfoProvider(props) {
       discount: data.foodData.discount,
       discountedPrice: data.foodData.discountedPrice,
       title: data.foodData.foodType,
+      specialItems: data.foodData.specialItems,
     };
 
     if (false) cartDispatchFunction({ type: "ADD_FIRST", data });

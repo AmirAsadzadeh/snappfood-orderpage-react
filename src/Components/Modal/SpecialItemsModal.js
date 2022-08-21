@@ -57,11 +57,9 @@ function SpecialItemsModal(props) {
         <div className={classes["special-items-container"]}>
           {Object.entries(props.specials).map((special) => (
             <div key={special[0]} className={classes["special-item-container"]}>
-              <div>
-                <label>
-                  <input id={special[0]} type="checkbox" /> {special[1][0]}
-                </label>
-              </div>
+              <label>
+                <input id={special[0]} type="checkbox" /> {special[1][0]}
+              </label>
               <p>
                 {new Intl.NumberFormat("fa-IR").format(special[1][1])} تومان
               </p>
