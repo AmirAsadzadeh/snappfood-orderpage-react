@@ -11,6 +11,32 @@ body {
   background-color: #f9fafb;
   font-family: "IranSans";
 }
+
+body {
+  overflow-y: overlay;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #383838;
+}
 /* 
 .container {
   max-width: 85rem;

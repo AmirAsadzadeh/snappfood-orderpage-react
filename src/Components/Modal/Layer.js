@@ -6,9 +6,9 @@ function Layer(props) {
   const body = document.querySelector("body");
 
   useEffect(() => {
-    body.style.overflow = "hidden";
+    body.style.overflowY = "hidden";
     return () => {
-      body.style.overflow = "scroll";
+      body.style.overflowY = "overlay";
     };
   }, [body]);
 
