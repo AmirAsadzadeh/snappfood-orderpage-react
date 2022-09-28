@@ -1,0 +1,25 @@
+.sendingservice-container {
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(235, 235, 235);
+}
+
+.sendingservice-logo {
+  display: flex;
+  margin-left: 0.3rem;
+  align-items: center;
+}
+
+.sendingservice-text {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.sendingservice-button {
+  display: flex;
+  align-items: center;
+}

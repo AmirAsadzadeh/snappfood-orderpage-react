@@ -1,0 +1,26 @@
+.sendtime-container {
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(235, 235, 235);
+}
+
+.sendtime-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 0.3rem;
+}
+
+.sendtime-text {
+  font-size: 0.7rem;
+  color: gray;
+  flex-grow: 1;
+}
+
+.sendtime-button {
+  display: flex;
+  align-items: center;
+}
