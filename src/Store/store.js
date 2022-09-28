@@ -160,6 +160,15 @@ const cartSlice = createSlice({
           state.totalPrice - state.totalDiscount + state.totalTax;
       }
     },
+    clearAll: (state) => {
+      state.items = {};
+      state.totalCounts = 0;
+      state.totalPrice = 0;
+      state.totalDiscount = 0;
+      state.totalTax = 0;
+      state.totalProfit = 0;
+      state.totalPay = 0;
+    },
   },
 });
 
