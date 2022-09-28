@@ -1,24 +1,27 @@
 import classes from "./Food.module.css";
-
 import React, { useContext, useState } from "react";
 import ReactDom from "react-dom";
 import RestaurantInfo from "../../../Context/restaurant-info";
-import CartInfo from "../../../Context/cart-info";
 import SpecialItemsModal from "../../Modal/SpecialItemsModal";
 import Layer from "../../Modal/Layer";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../../Store/store";
 
 function Food(props) {
   const { isOpen: restaurantIsOpen } = useContext(RestaurantInfo);
-  const cartInfoCtx = useContext(CartInfo);
-
-  // const
 
   const [hasModal, setHasModal] = useState(false);
   const [needModal, setNeedModal] = useState(null);
   const [orderData, setOrderData] = useState("");
 
+  const items = useSelector((state) => state.items);
+  const cart = useSelector((state) => state);
+
+  const dispatch = useDispatch();
+
   const modalCloseHandler = function () {
     setHasModal(false);
+    setNeedModal(null);
   };
 
   const buttonClickHandler = function (specials, component, data) {
@@ -27,11 +30,13 @@ function Food(props) {
       setNeedModal(component);
       setOrderData(data);
     } else {
-      cartInfoCtx.controller(data);
     }
   };
 
-  const addSpecialItemFormSubmitHandler = function () {};
+  const addSpecialItemFormSubmitHandler = function (specials) {
+    dispatch(cartActions.addToCart({ ...orderData, specials: specials }));
+   
+  };
 
   const foodInfo = props.food;
 
@@ -67,16 +72,16 @@ function Food(props) {
                     item.specials,
                     item.id,
                     {
-                      actionType: "add",
                       foodData: {
                         name: foodInfo.name,
                         id: foodInfo.foodId,
+                        typeId: item.id,
+                        typeTitle: item.title,
                         originalPrice: item.price,
                         discountedPrice:
                           item.price - (item.price * foodInfo.discount) / 100,
                         discount: foodInfo.discount,
                         foodType: item.title,
-                        specialItems: [],
                       },
                     }
                   )}
@@ -99,7 +104,7 @@ function Food(props) {
                       type={item.title}
                       specials={item.specials}
                       onClose={modalCloseHandler}
-                      onSubmit={cartInfoCtx.controller}
+                      onSubmit={addSpecialItemFormSubmitHandler}
                       // data={}
                     />,
                     document.querySelector("#modal-message")

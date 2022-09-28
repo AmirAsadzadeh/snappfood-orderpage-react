@@ -8,21 +8,24 @@ import MainContent from "./Components/MainContent/MainContent";
 import UserInfoProvider from "./Context/UserInfoProvider";
 import RestaurantInfoProvider from "./Context/RestaurantInfoProvider";
 import CartInfoProvider from "./Context/CartInfoProvider";
+import { Provider } from "react-redux";
+import store from "./Store/store";
 
 function App() {
   return (
-    <RestaurantInfoProvider>
-      <UserInfoProvider>
-        <Header />
+    <Provider store={store}>
+      <RestaurantInfoProvider>
+        <UserInfoProvider>
+          <Header />
 
-        <AddressBar />
+          <AddressBar />
 
-        {/* <div className="container"> */}
-        <CartInfoProvider>
-          <MainContent />
-        </CartInfoProvider>
+          {/* <div className="container"> */}
+          <CartInfoProvider>
+            <MainContent />
+          </CartInfoProvider>
 
-        {/* <CardBar>
+          {/* <CardBar>
             <TimeBar></TimeBar>
 
             <SenderName></SenderName>
@@ -31,9 +34,10 @@ function App() {
           </CardBar>
 
           <Footer></Footer> */}
-        {/* </div> */}
-      </UserInfoProvider>
-    </RestaurantInfoProvider>
+          {/* </div> */}
+        </UserInfoProvider>
+      </RestaurantInfoProvider>
+    </Provider>
   );
 }
 

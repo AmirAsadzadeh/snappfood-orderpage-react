@@ -19,18 +19,22 @@ function SpecialItemsModal(props) {
 
     const nodeList = formRef.current.childNodes;
 
-    const selectedItems = [];
+    const selectedItems = {};
 
-    nodeList.forEach((item) => {
-      if (item.querySelector("input")?.checked === true) {
-        const name = item.querySelector("input").id;
-        selectedItems.push([props.specials[name][0], props.specials[name][1]]);
+    nodeList[0].querySelectorAll("input").forEach((item) => {
+      if (!item) return;
+      if (item?.checked === true) {
+        const name = item.id;
+        selectedItems[item.id] = [
+          props.specials[name][0],
+          props.specials[name][1],
+        ];
       }
     });
 
     props.onClose();
 
-    return selectedItems;
+    props.onSubmit(selectedItems);
   };
 
   return (
@@ -53,7 +57,12 @@ function SpecialItemsModal(props) {
       <p className={classes["modal-description"]}>
         {props.foodName + " " + props.type}
       </p>
-      <form ref={formRef} className={classes.form} action="">
+      <form
+        ref={formRef}
+        className={classes.form}
+        action=""
+        onSubmit={formSubmitHandler}
+      >
         <div className={classes["special-items-container"]}>
           {Object.entries(props.specials).map((special) => (
             <div key={special[0]} className={classes["special-item-container"]}>
@@ -69,7 +78,7 @@ function SpecialItemsModal(props) {
 
         <button
           className={classes["modal-submit-button"]}
-          onClick={formSubmitHandler}
+          // onClick={formSubmitHandler}
         >
           افزودن به سبد خرید
         </button>
