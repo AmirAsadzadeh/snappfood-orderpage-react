@@ -1,0 +1,19 @@
+.receipt-container {
+}
+.receipt-container p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(58, 61, 66);
+  margin: 1rem 0;
+}
+
+.payment {
+  border-top: 1px solid rgb(233, 233, 233);
+  padding: 1rem 0;
+}
+
+.payment span {
+  font-weight: bolder;
+}
