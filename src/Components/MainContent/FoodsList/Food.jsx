@@ -24,18 +24,18 @@ function Food(props) {
     setNeedModal(null);
   };
 
+  const addSpecialItemFormSubmitHandler = function (specials) {
+    dispatch(cartActions.addToCart({ ...orderData, specials: specials }));
+  };
+
   const buttonClickHandler = function (specials, component, data) {
     if (Object.keys(specials).length > 0) {
       setHasModal(true);
       setNeedModal(component);
       setOrderData(data);
     } else {
+      dispatch(cartActions.addToCart({ ...data, specials: [] }));
     }
-  };
-
-  const addSpecialItemFormSubmitHandler = function (specials) {
-    dispatch(cartActions.addToCart({ ...orderData, specials: specials }));
-   
   };
 
   const foodInfo = props.food;
