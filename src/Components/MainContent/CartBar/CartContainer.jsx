@@ -7,6 +7,7 @@ import DeleteCartModal from "../../Modal/DeleteCartModal";
 import Layer from "../../Modal/Layer";
 import CartItem from "./CartItem";
 import CartReceipt from "./CartReceipt";
+import CartUserNote from "./CartUserNote";
 
 function CartContainer() {
   const dispatch = useDispatch();
@@ -66,6 +67,7 @@ function CartContainer() {
           <CartItem item={cartItems[item]} />
         ))}
         <CartReceipt />
+        <CartUserNote />
       </div>
 
       {hasModal &&

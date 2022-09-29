@@ -20,6 +20,7 @@ const cartInitialState = {
   totalTax: 0,
   totalProfit: 0,
   totalPay: 0,
+  moreInfo: "",
 };
 
 const cartSlice = createSlice({
@@ -87,8 +88,6 @@ const cartSlice = createSlice({
       }
 
       if (foundedOrder) {
-        console.log("there is only one");
-
         foundedOrder.orderItemCount++;
 
         foundedOrder.orderItemOriginalPrice +=
@@ -202,6 +201,9 @@ const cartSlice = createSlice({
         state.totalPay =
           state.totalPrice - state.totalDiscount + state.totalTax;
       }
+    },
+    addNote: (state, action) => {
+      state.moreInfo = action.payload.moreInfo;
     },
     clearAll: (state) => {
       state.items = {};
