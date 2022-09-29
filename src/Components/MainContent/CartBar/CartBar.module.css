@@ -11,6 +11,10 @@
   overflow: scroll;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 @media only screen and (min-width: 960px) {
   .cart-bar {
     width: 25%;
