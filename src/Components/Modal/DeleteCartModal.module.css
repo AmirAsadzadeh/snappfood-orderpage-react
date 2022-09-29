@@ -42,6 +42,7 @@
   font-weight: bold;
   border-radius: 0.3rem;
   transition: all ease-in 150ms;
+  cursor: pointer;
 }
 
 .modal-delete-btn {
