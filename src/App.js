@@ -7,7 +7,6 @@ import MainContent from "./Components/MainContent/MainContent";
 
 import UserInfoProvider from "./Context/UserInfoProvider";
 import RestaurantInfoProvider from "./Context/RestaurantInfoProvider";
-import CartInfoProvider from "./Context/CartInfoProvider";
 import { Provider } from "react-redux";
 import store from "./Store/store";
 
@@ -21,9 +20,7 @@ function App() {
           <AddressBar />
 
           {/* <div className="container"> */}
-          <CartInfoProvider>
-            <MainContent />
-          </CartInfoProvider>
+          <MainContent />
 
           {/* <CardBar>
             <TimeBar></TimeBar>

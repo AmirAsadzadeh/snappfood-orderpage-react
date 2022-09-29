@@ -5,7 +5,6 @@ import UserInfo from "./user-info";
 function UserInfoProvider(props) {
   const [userInfo] = useState({
     isLoggedIn: false,
-    userShoppingCard: [],
     userAddress: "ولیعصر، ولی عصر، فلسطین، برادران غفاری",
   });
 

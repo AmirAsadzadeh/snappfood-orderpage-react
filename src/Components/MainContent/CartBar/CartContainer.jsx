@@ -8,6 +8,7 @@ import Layer from "../../Modal/Layer";
 import CartItem from "./CartItem";
 import CartReceipt from "./CartReceipt";
 import CartUserNote from "./CartUserNote";
+import SubmitButton from "./SubmitButton";
 
 function CartContainer() {
   const dispatch = useDispatch();
@@ -68,6 +69,7 @@ function CartContainer() {
         ))}
         <CartReceipt />
         <CartUserNote />
+        <SubmitButton />
       </div>
 
       {hasModal &&
