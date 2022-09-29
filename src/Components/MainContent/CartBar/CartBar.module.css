@@ -1,10 +1,14 @@
 .cart-bar {
   width: 100%;
-  padding: 1rem;
-  background-color: yellow;
+  max-height: 50rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5.5rem;
+  padding:0 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow: scroll;
 }
 
 @media only screen and (min-width: 960px) {

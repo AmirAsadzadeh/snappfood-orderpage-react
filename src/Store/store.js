@@ -27,16 +27,22 @@ const cartSlice = createSlice({
   initialState: cartInitialState,
   reducers: {
     addToCart: (state, action) => {
-      const orderData = {
-        ...action.payload.foodData,
-        specials: action.payload.specials,
-      };
+      const orderData =
+        action.payload.foodData && action.payload.specials
+          ? {
+              ...action.payload.foodData,
+              specials: action.payload.specials,
+            }
+          : {};
 
-      const orderItemId = orderItemIdGenerator(
-        orderData.id,
-        orderData.typeId,
-        orderData.specials
-      );
+      const orderItemId =
+        action.payload.foodData && action.payload.specials
+          ? orderItemIdGenerator(
+              orderData.id,
+              orderData.typeId,
+              orderData.specials
+            )
+          : action.payload.orderId;
 
       const foundedOrder = state.items[orderItemId];
 
@@ -47,6 +53,8 @@ const cartSlice = createSlice({
         );
 
         state.items[orderItemId] = {
+          orderId: orderItemId,
+
           orderItemCount: 1,
 
           orderFoodName: `${orderData.name} ${orderData.foodType}`,
@@ -72,7 +80,7 @@ const cartSlice = createSlice({
         state.totalTax +=
           state.items[orderItemId].orderItemDiscountedPrice * TAX;
 
-        state.totalProfit += state.totalDiscount - state.totalTax;
+        state.totalProfit = state.totalDiscount - state.totalTax;
 
         state.totalPay =
           state.totalPrice - state.totalDiscount + state.totalTax;
@@ -98,14 +106,17 @@ const cartSlice = createSlice({
           state.items[orderItemId].orderItemCount;
 
         state.totalDiscount +=
-          (orderData.originalPrice * orderData.discount) / 100;
+          ((state.items[orderItemId].orderItemOriginalPrice /
+            state.items[orderItemId].orderItemCount) *
+            state.items[orderItemId].orderFoodDiscountPercentage) /
+          100;
 
         state.totalTax +=
           (state.items[orderItemId].orderItemDiscountedPrice /
             state.items[orderItemId].orderItemCount) *
           TAX;
 
-        state.totalProfit += state.totalDiscount - state.totalTax;
+        state.totalProfit = state.totalDiscount - state.totalTax;
 
         state.totalPay =
           state.totalPrice - state.totalDiscount + state.totalTax;
@@ -113,20 +124,49 @@ const cartSlice = createSlice({
     },
 
     removeFromCart: (state, action) => {
-      const orderData = {
-        ...action.payload.foodData,
-        specials: action.payload.specials,
-      };
+      const orderData =
+        action.payload.foodData && action.payload.specials
+          ? {
+              ...action.payload.foodData,
+              specials: action.payload.specials,
+            }
+          : {};
 
-      const orderItemId = orderItemIdGenerator(
-        orderData.id,
-        orderData.typeId,
-        orderData.specials
-      );
+      const orderItemId =
+        action.payload.foodData && action.payload.specials
+          ? orderItemIdGenerator(
+              orderData.id,
+              orderData.typeId,
+              orderData.specials
+            )
+          : action.payload.orderId;
 
       const foundedOrder = state.items[orderItemId];
 
-      if (foundedOrder.orderItemCount === 1) {
+      if (!(foundedOrder.orderItemCount > 1)) {
+        state.totalCounts--;
+
+        state.totalPrice -=
+          state.items[orderItemId].orderItemOriginalPrice /
+          state.items[orderItemId].orderItemCount;
+
+        state.totalDiscount -=
+          ((state.items[orderItemId].orderItemOriginalPrice /
+            state.items[orderItemId].orderItemCount) *
+            state.items[orderItemId].orderFoodDiscountPercentage) /
+          100;
+
+        state.totalTax -=
+          (state.items[orderItemId].orderItemDiscountedPrice /
+            state.items[orderItemId].orderItemCount) *
+          TAX;
+
+        state.totalProfit = state.totalDiscount - state.totalTax;
+
+        state.totalPay =
+          state.totalPrice - state.totalDiscount + state.totalTax;
+
+        delete state.items[orderItemId];
       }
 
       if (foundedOrder.orderItemCount > 1) {
@@ -147,14 +187,17 @@ const cartSlice = createSlice({
           state.items[orderItemId].orderItemCount;
 
         state.totalDiscount -=
-          (orderData.originalPrice * orderData.discount) / 100;
+          ((state.items[orderItemId].orderItemOriginalPrice /
+            state.items[orderItemId].orderItemCount) *
+            state.items[orderItemId].orderFoodDiscountPercentage) /
+          100;
 
         state.totalTax -=
           (state.items[orderItemId].orderItemDiscountedPrice /
             state.items[orderItemId].orderItemCount) *
           TAX;
 
-        state.totalProfit -= state.totalDiscount - state.totalTax;
+        state.totalProfit = state.totalDiscount - state.totalTax;
 
         state.totalPay =
           state.totalPrice - state.totalDiscount + state.totalTax;

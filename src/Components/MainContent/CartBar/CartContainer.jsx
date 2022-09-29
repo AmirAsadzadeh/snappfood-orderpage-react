@@ -5,11 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../../Store/store";
 import DeleteCartModal from "../../Modal/DeleteCartModal";
 import Layer from "../../Modal/Layer";
+import CartItem from "./CartItem";
 
 function CartContainer() {
   const dispatch = useDispatch();
 
   const cartInfo = useSelector((state) => state);
+
+  const cartItems = useSelector((state) => state.items);
 
   const [hasModal, setHasModal] = useState(false);
 
@@ -58,7 +61,11 @@ function CartContainer() {
             </svg>
           </button>
         </div>
+        {Object.keys(cartItems).map((item) => (
+          <CartItem item={cartItems[item]} />
+        ))}
       </div>
+
       {hasModal &&
         ReactDOM.createPortal(
           <DeleteCartModal

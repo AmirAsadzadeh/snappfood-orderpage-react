@@ -92,7 +92,7 @@ function Header() {
         ></UserAdress>
       </div>
 
-      <SearchBar></SearchBar>
+      {/* <SearchBar></SearchBar> */}
 
       <div className={classes["header-left"]}>
         <ToolBar
