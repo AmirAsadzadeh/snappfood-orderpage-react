@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./CartItem.module.css";
-import { formatNumber } from "../../Helper/numberFormatter";
+import { formatNumber } from "../../Helper/NumberFormatter";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../../Store/store";
 import ControlButtons from "../../UI/ControlButtons";
