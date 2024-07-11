@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ControlButtons.module.css";
-import { formatNumber } from "../Helper/numberFormatter";
+import { formatNumber } from "../Helper/NumberFormatter";
 
 const garbageIcon = (
   <svg
