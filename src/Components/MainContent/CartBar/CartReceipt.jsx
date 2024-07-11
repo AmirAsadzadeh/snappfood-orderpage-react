@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { formatNumber } from "../../Helper/numberFormatter";
+import { formatNumber } from "../../Helper/NumberFormatter";
 import classes from "./CartReceipt.module.css";
 
 function CartReceipt() {
